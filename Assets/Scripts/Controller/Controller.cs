@@ -3,10 +3,12 @@ namespace Grow {
     public class Controller {
 
         Context ctx;
-        Domain domain;
+        RoleDomain roleDomain;
+        FieldDomain fieldDomain;
 
         public Controller() { 
-            this.domain = new Domain();
+            this.roleDomain = new RoleDomain();
+            this.fieldDomain = new FieldDomain();
         }
 
         public void Inject(Context ctx) {
@@ -14,8 +16,8 @@ namespace Grow {
         }
 
         public void GameEnter() {
-            domain.SpawnRole();
-            domain.SpawnField();
+            roleDomain.SpawnRole();
+            fieldDomain.SpawnField();
         }
 
         public void GameTick(float dt) {

@@ -1,23 +1,13 @@
 namespace Grow {
 
-    public class Domain {
+    public class FieldDomain {
 
         Context ctx;
 
-        public Domain() { }
+        public FieldDomain() { }
 
         public void Inject(Context ctx) {
             this.ctx = ctx;
-        }
-
-        public void SpawnRole() {
-
-            var factory = ctx.factory;
-
-            var role = factory.CreateRoleEntity();
-            var roleRepo = ctx.roleRepository;
-            roleRepo.SetRole(role);
-
         }
 
         public void SpawnField() {
