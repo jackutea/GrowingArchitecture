@@ -1,13 +1,13 @@
 namespace Grow {
 
-    public class Context {
+    public class BattleContext {
         
         public RoleRepository roleRepository;
         public FieldRepository fieldRepository;
         
         public Factory factory;
 
-        public Context() {
+        public BattleContext() {
             roleRepository = new RoleRepository();
             fieldRepository = new FieldRepository();
             factory = new Factory();

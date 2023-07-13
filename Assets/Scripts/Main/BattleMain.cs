@@ -14,12 +14,11 @@ namespace Grow {
             // ==== Instantiate ====
             battleController = new BattleController();
             townController = new TownController();
-
-            var ctx = new Context();
+            var battleApp = new BattleApp();
 
             // ==== Injection ====
-            battleController.Inject(ctx);
-            townController.Inject(ctx);
+            battleController.Inject(battleApp);
+            townController.Inject(battleApp);
 
             // ==== Start ====
             battleController.GameEnter();

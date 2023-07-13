@@ -2,15 +2,16 @@ namespace Grow {
 
     public class TownController {
 
-        Context ctx;
+        TownContext ctx;
         RoleDomain roleDomain;
 
         public TownController() { 
+            this.ctx = new TownContext();
             this.roleDomain = new RoleDomain();
         }
 
-        public void Inject(Context ctx) {
-            this.ctx = ctx;
+        public void Inject(BattleApp battleApp) {
+            ctx.battleApp = battleApp;
         }
 
         public void GameEnter() {

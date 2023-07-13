@@ -1,0 +1,16 @@
+{
+    "name": "Grow.TownBusiness",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a6d5f1da8ffabe44987ba9351cf19833"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

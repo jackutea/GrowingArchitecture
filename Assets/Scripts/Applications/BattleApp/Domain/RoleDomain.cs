@@ -2,11 +2,11 @@ namespace Grow {
 
     public class RoleDomain {
 
-        Context ctx;
+        BattleContext ctx;
 
         public RoleDomain() { }
 
-        public void Inject(Context ctx) {
+        public void Inject(BattleContext ctx) {
             this.ctx = ctx;
         }
 
@@ -16,7 +16,7 @@ namespace Grow {
 
             var role = factory.CreateRoleEntity();
             var roleRepo = ctx.roleRepository;
-            roleRepo.SetRole(role);
+            roleRepo.AddRole(role);
 
         }
 

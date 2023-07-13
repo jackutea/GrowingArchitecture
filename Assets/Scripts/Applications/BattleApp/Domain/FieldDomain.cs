@@ -2,11 +2,11 @@ namespace Grow {
 
     public class FieldDomain {
 
-        Context ctx;
+        BattleContext ctx;
 
         public FieldDomain() { }
 
-        public void Inject(Context ctx) {
+        public void Inject(BattleContext ctx) {
             this.ctx = ctx;
         }
 

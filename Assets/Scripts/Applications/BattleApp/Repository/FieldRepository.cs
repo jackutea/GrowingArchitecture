@@ -7,7 +7,7 @@ namespace Grow {
         Dictionary<int, RoleEntity> allField;
 
         public void SetField(FieldEntity field) {
-            this.field = field;
+            
         }
 
     }

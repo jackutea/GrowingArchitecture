@@ -6,8 +6,15 @@ namespace Grow {
 
         Dictionary<int, RoleEntity> allRole;
 
-        public void SetRole(RoleEntity role) {
-            this.role = role;
+        public void AddRole(RoleEntity role) {
+
+        }
+
+        public void RemoveRole() {}
+
+        public bool TryGetRole(out RoleEntity role) {
+            role = null;
+            return true;
         }
 
     }
