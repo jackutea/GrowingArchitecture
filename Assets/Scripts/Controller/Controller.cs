@@ -3,25 +3,19 @@ namespace Grow {
     public class Controller {
 
         Context ctx;
+        Domain domain;
 
-        public Controller() { }
+        public Controller() { 
+            this.domain = new Domain();
+        }
 
         public void Inject(Context ctx) {
             this.ctx = ctx;
         }
 
         public void GameEnter() {
-
-            var factory = ctx.factory;
-
-            var role = factory.CreateRoleEntity();
-            var roleRepo = ctx.roleRepository;
-            roleRepo.SetRole(role);
-
-            var field = factory.CreateFieldEntity();
-            var fieldRepo = ctx.fieldRepository;
-            fieldRepo.SetField(field);
-
+            domain.SpawnRole();
+            domain.SpawnField();
         }
 
         public void GameTick(float dt) {
