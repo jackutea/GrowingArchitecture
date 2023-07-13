@@ -1,3 +1,5 @@
+using Grow.BattleApplication;
+
 namespace Grow.BattleBusiness {
 
     public class BattleContext {
