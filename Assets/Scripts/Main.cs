@@ -6,23 +6,30 @@ namespace Grow {
 
     public class Main : MonoBehaviour {
 
-        Controller controller;
+        BattleController battleController;
+        TownController townController;
 
         void Start() {
 
-            controller = new Controller();
+            // ==== Instantiate ====
+            battleController = new BattleController();
+            townController = new TownController();
 
             var ctx = new Context();
-            controller.Inject(ctx);
 
-            controller.GameEnter();
+            // ==== Injection ====
+            battleController.Inject(ctx);
+            townController.Inject(ctx);
+
+            // ==== Start ====
+            battleController.GameEnter();
 
         }
 
         void Update() {
 
-            if (controller != null) {
-                controller.GameTick(Time.deltaTime);
+            if (battleController != null) {
+                battleController.GameTick(Time.deltaTime);
             }
 
         }
