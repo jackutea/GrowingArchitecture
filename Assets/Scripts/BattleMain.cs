@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace Grow {
 
-    public class Main : MonoBehaviour {
+    public class ClientMain : MonoBehaviour {
 
         BattleController battleController;
         TownController townController;
 
-        void Start() {
+        void Awake() {
 
             // ==== Instantiate ====
             battleController = new BattleController();
