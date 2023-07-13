@@ -6,22 +6,26 @@ namespace Grow {
 
     public class Main : MonoBehaviour {
 
-        RoleEntity role;
-        FieldEntity field;
-
-        Factory factory;
+        Context ctx;
 
         void Start() {
 
-            factory = new Factory();
+            ctx = new Context();
 
-            role = factory.CreateRoleEntity();
-            field = factory.CreateFieldEntity();
+            var factory = ctx.factory;
+            
+            var role = factory.CreateRoleEntity();
+            var roleRepo = ctx.roleRepository;
+            roleRepo.SetRole(role);
+
+            var field = factory.CreateFieldEntity();
+            var fieldRepo = ctx.fieldRepository;
+            fieldRepo.SetField(field);
 
         }
 
         void Update() {
-            
+
         }
 
     }
