@@ -9,10 +9,14 @@ namespace Grow {
         RoleEntity role;
         FieldEntity field;
 
+        Factory factory;
+
         void Start() {
 
-            role = new GameObject("role").AddComponent<RoleEntity>();
-            field = new GameObject("field").AddComponent<FieldEntity>();
+            factory = new Factory();
+
+            role = factory.CreateRoleEntity();
+            field = factory.CreateFieldEntity();
 
         }
 
