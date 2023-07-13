@@ -6,25 +6,24 @@ namespace Grow {
 
     public class Main : MonoBehaviour {
 
-        Context ctx;
+        Controller controller;
 
         void Start() {
 
-            ctx = new Context();
+            controller = new Controller();
 
-            var factory = ctx.factory;
-            
-            var role = factory.CreateRoleEntity();
-            var roleRepo = ctx.roleRepository;
-            roleRepo.SetRole(role);
+            var ctx = new Context();
+            controller.Inject(ctx);
 
-            var field = factory.CreateFieldEntity();
-            var fieldRepo = ctx.fieldRepository;
-            fieldRepo.SetField(field);
+            controller.GameEnter();
 
         }
 
         void Update() {
+
+            if (controller != null) {
+                controller.GameTick(Time.deltaTime);
+            }
 
         }
 
