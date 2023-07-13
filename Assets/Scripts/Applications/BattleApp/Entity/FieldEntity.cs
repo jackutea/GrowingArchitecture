@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Grow {
+namespace Grow.BattleApplication {
 
     public class FieldEntity : MonoBehaviour {
 

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Grow {
+namespace Grow.BattleApplication {
 
     public class RoleRepository {
 

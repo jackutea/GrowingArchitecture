@@ -1,14 +1,12 @@
-namespace Grow {
+using Grow.BattleApplication;
+
+namespace Grow.BattleBusiness {
 
     public class BattleController {
 
         BattleContext context;
-        RoleDomain roleDomain;
-        FieldDomain fieldDomain;
 
         public BattleController() { 
-            this.roleDomain = new RoleDomain();
-            this.fieldDomain = new FieldDomain();
             this.context= new BattleContext();
         }
 
@@ -17,8 +15,8 @@ namespace Grow {
         }
 
         public void GameEnter() {
-            roleDomain.SpawnRole();
-            fieldDomain.SpawnField();
+            // battleApp.Spawn(); // 初期做法
+            // battleApp.SetterAPI.Spawn // 晚期做法
         }
 
         public void GameTick(float dt) {

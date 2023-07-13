@@ -1,5 +1,5 @@
 
-namespace Grow {
+namespace Grow.TownBusiness {
 
     public class TownContext {
 
